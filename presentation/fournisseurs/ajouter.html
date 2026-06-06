@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ajouter Fournisseur</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
+        body{
+            background:#f4f6f9;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+        }
+
+        .container{
+            width:500px;
+            background:white;
+            padding:30px;
+            border-radius:10px;
+            box-shadow:0 0 15px rgba(0,0,0,0.1);
+        }
+
+        h1{
+            text-align:center;
+            margin-bottom:20px;
+            color:#2c3e50;
+        }
+
+        label{
+            display:block;
+            margin-bottom:5px;
+            font-weight:bold;
+            color:#34495e;
+        }
+
+        input,
+        textarea{
+            width:100%;
+            padding:10px;
+            border:1px solid #ccc;
+            border-radius:5px;
+            margin-bottom:15px;
+        }
+
+        textarea{
+            height:100px;
+            resize:none;
+        }
+
+        button{
+            width:100%;
+            padding:12px;
+            background:#27ae60;
+            color:white;
+            border:none;
+            border-radius:5px;
+            cursor:pointer;
+            font-size:16px;
+        }
+
+        button:hover{
+            background:#219150;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Ajouter un fournisseur</h1>
+
+    <form action="../../traitements/fournisseurs/AjouterFournisseur.php"
+          method="POST">
+
+        <label>Nom du fournisseur</label>
+        <input type="text"
+               name="nom"
+               required>
+
+        <label>Téléphone</label>
+        <input type="text"
+               name="telephone">
+
+        <label>Email</label>
+        <input type="email"
+               name="email">
+
+        <label>Adresse</label>
+        <textarea name="adresse"></textarea>
+
+        <button type="submit">
+            Enregistrer
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+</html>

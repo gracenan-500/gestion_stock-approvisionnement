@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+<meta charset="UTF-8">
+<title>Ajouter Produit</title>
+
+<style>
+
+body{
+    font-family:Arial;
+    background:#f4f6f9;
+}
+
+.container{
+    width:700px;
+    margin:30px auto;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+}
+
+h1{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+input,select{
+    width:100%;
+    padding:10px;
+    margin-bottom:15px;
+}
+
+button{
+    background:#27ae60;
+    color:white;
+    border:none;
+    padding:12px;
+    width:100%;
+    cursor:pointer;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Ajouter un produit</h1>
+
+<form
+action="../../traitements/produits/AjouterProduit.php"
+method="POST">
+
+<label>Famille</label>
+<input type="number"
+       name="id_famille"
+       required>
+
+<label>Produit Père (optionnel)</label>
+<input type="number"
+       name="id_produit_pere">
+
+<label>Code Produit</label>
+<input type="text"
+       name="code"
+       required>
+
+<label>Désignation</label>
+<input type="text"
+       name="designation"
+       required>
+
+<label>Unité</label>
+<input type="text"
+       name="unite"
+       value="unité">
+
+<label>Prix Achat</label>
+<input type="number"
+       step="0.01"
+       name="prix_achat"
+       required>
+
+<label>Prix Vente</label>
+<input type="number"
+       step="0.01"
+       name="prix_vente"
+       required>
+
+<label>Stock Alerte</label>
+<input type="number"
+       name="stock_alerte"
+       value="0">
+
+<label>
+<input type="checkbox"
+       name="is_fractionnaire">
+Produit fractionnable
+</label>
+
+<br><br>
+
+<label>Facteur de Fraction</label>
+<input type="number"
+       step="0.01"
+       name="facteur_fraction"
+       value="1">
+
+<button type="submit">
+Enregistrer
+</button>
+
+</form>
+
+</div>
+
+</body>
+</html>

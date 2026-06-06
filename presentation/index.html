@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Gestion des Approvisionnements</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:linear-gradient(135deg,#0f172a,#1e293b,#334155);
+}
+
+/* HEADER */
+
+header{
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid rgba(255,255,255,0.1);
+    padding:25px;
+    text-align:center;
+}
+
+header h1{
+    color:white;
+    font-size:32px;
+    font-weight:700;
+    letter-spacing:2px;
+}
+
+header p{
+    color:#cbd5e1;
+    margin-top:10px;
+    font-size:15px;
+}
+
+/* CONTAINER */
+
+.container{
+    width:90%;
+    max-width:1400px;
+    margin:auto;
+    padding:50px 0;
+}
+
+/* MENU */
+
+.menu{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+/* CARDS */
+
+.card{
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,0.1);
+    border-radius:20px;
+    padding:35px;
+    transition:0.4s;
+    position:relative;
+    overflow:hidden;
+}
+
+.card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-100%;
+    width:100%;
+    height:100%;
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,0.15),
+        transparent
+    );
+    transition:0.8s;
+}
+
+.card:hover::before{
+    left:100%;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(0,0,0,0.3);
+}
+
+.card a{
+    text-decoration:none;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    color:white;
+}
+
+/* ICONES */
+
+.icon{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:40px;
+    margin-bottom:20px;
+    background:linear-gradient(
+        135deg,
+        #2563eb,
+        #3b82f6
+    );
+}
+
+.card h2{
+    margin-bottom:10px;
+    text-align:center;
+    font-size:22px;
+}
+
+.card p{
+    text-align:center;
+    color:#cbd5e1;
+    font-size:14px;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    color:#94a3b8;
+    padding:25px;
+    margin-top:20px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    header h1{
+        font-size:24px;
+    }
+
+    .menu{
+        grid-template-columns:1fr;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+    <h1>GESTION DES APPROVISIONNEMENTS</h1>
+
+    <p>
+        Système de gestion des achats, réceptions,
+        factures, règlements et dons.
+    </p>
+
+</header>
+
+<div class="container">
+
+    <div class="menu">
+
+        <div class="card">
+            <a href="fournisseurs/ajouter.html">
+                <div class="icon">🏢</div>
+                <h2>Fournisseurs</h2>
+                <p>Gestion des fournisseurs</p>
+            </a>
+        </div>
+
+        <div class="card">
+            <a href="produits/liste.html">
+                <div class="icon">📦</div>
+                <h2>Produits</h2>
+                <p>Consultation des produits</p>
+            </a>
+        </div>
+
+        <div class="card">
+            <a href="commandes/ajouter.html">
+                <div class="icon">📝</div>
+                <h2>Commandes</h2>
+                <p>Bon de commande fournisseur</p>
+            </a>
+        </div>
+
+        <div class="card">
+            <a href="receptions/ajouter.html">
+                <div class="icon">📥</div>
+                <h2>Réceptions</h2>
+                <p>Réception des marchandises</p>
+            </a>
+        </div>
+
+        <div class="card">
+            <a href="factures/ajouter.html">
+                <div class="icon">🧾</div>
+                <h2>Factures</h2>
+                <p>Factures fournisseurs</p>
+            </a>
+        </div>
+
+        <div class="card">
+            <a href="reglements/ajouter.html">
+                <div class="icon">💳</div>
+                <h2>Règlements</h2>
+                <p>Paiement des factures</p>
+            </a>
+        </div>
+
+        <div class="card">
+            <a href="dons/ajouter.html">
+                <div class="icon">🎁</div>
+                <h2>Dons</h2>
+                <p>Entrée des produits issus des dons</p>
+            </a>
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+
+    © 2026 - Projet BTS Génie Logiciel<br>
+    Module : Gestion des Approvisionnements
+
+</footer>
+
+</body>
+</html>
